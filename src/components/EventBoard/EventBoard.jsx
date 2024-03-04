@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { EventCard } from "components/EventCard/EventCard.jsx";
 import css from "components/EventBoard/EventBoard.module.css";
 
@@ -10,7 +10,7 @@ export const EventBoard = ({ events }) => {
         const { name, location, speaker, type, time } = event;
         return (
           <EventCard
-            key={`{name}_{time}`}
+            key={name}
             name={name}
             location={location}
             speaker={speaker}
@@ -23,15 +23,17 @@ export const EventBoard = ({ events }) => {
     </div>
   );
 };
-// EventBoard.propTypes = {
-//   events: PropTypes.arrayOff({
-//     name: PropTypes.string.isRequired,
-//     location: PropTypes.string.isRequired,
-//     speaker: PropTypes.string.isRequired,
-//     type: PropTypes.string.isRequired,
-//     time: PropTypes.shape({
-//       start: PropTypes.string.isRequired,
-//       end: PropTypes.string.isRequired,
-//     }),
-//   }),
-// };
+EventBoard.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      speaker: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      time: PropTypes.exact({
+        start: PropTypes.string.isRequired,
+        end: PropTypes.string.isRequired,
+      }),
+    })
+  ),
+};
