@@ -19,7 +19,7 @@
   margin-top: 0;
 
   margin-bottom: 8px;
-  color: var(—color-primary-text);
+  color: var(--color-primary-text);
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -28,7 +28,7 @@
 .icon {
   display: block;
   margin-right: 8px;
-  color: var(—color-secondary-text);
+  color: var(--color-secondary-text);
 }
 .chip {
   position: absolute;
@@ -41,11 +41,11 @@
   color: #fff;
 }
 .free {
-  background-color: var(—color-green);
+  background-color: var(--color-green);
 }
 .paid {
-  background-color: var(—color-blue);
+  background-color: var(--color-blue);
 }
 .vip {
-  background-color: var(—color-red);
+  background-color: var(--color-red);
 }

@@ -1,5 +1,5 @@
-// import { formatDistanceStrict } from "date-fns";
+import { formatDistanceStrict } from "date-fns";
 
-// export const formatEventDuration = (start, end) => {
-//   return formatDistanceStrict(Date.parse(start), Date.parse(end));
-// };
+export const formatEventDuration = (start, end) => {
+  return formatDistanceStrict(Date.parse(start), Date.parse(end));
+};
