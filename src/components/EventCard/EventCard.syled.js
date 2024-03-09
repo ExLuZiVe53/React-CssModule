@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const CardStyled = styled.div`
   position: relative;
-  border: ${(props) => `2px dashed ${(props) => props.theme.black}`};
+  border: 2px dashed ${(props) => props.theme.black};
   padding: ${(props) => props.theme.spacing}px;
   border-radius: 4px;
 `;
