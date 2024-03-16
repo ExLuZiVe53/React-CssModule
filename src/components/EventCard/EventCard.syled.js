@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const CardStyled = styled.div`
   position: relative;
-  border: 2px dashed ${(props) => props.theme.black};
+  border: 2px dashed ${(props) => props.theme.colors.black};
   padding: ${(props) => props.theme.spacing}px;
   border-radius: 4px;
 `;
@@ -18,7 +18,7 @@ export const InfoStyled = styled.p`
   align-items: center;
   margin-top: 0;
   margin-bottom: 8px;
-  color: var(—color-primary-text);
+  color: ${(props) => props.theme.colors.primaryText};
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -27,7 +27,7 @@ export const InfoStyled = styled.p`
   & svg {
     display: block;
     margin-right: 8px;
-    color: var(—color-secondary-text);
+    color: ${(props) => props.theme.colors.secondaryText};
   }
 `;
 const setBgColor = (props) => {
